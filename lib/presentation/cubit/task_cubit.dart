@@ -35,4 +35,12 @@ class TaskCubit extends Cubit<List<Task>> {
 
     loadTasks();
   }
+
+  Future<void> toggleDone(Task task) async {
+    final updateTask = task.toggleDone();
+
+    await _taskRepo.updateTask(updateTask);
+
+    loadTasks();
+  }
 }
