@@ -38,9 +38,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Bloc Planner',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData.dark(),
       home: BlocProvider(
         create: (_) => TaskCubit(taskRepo),
         child: const TaskScreen(),
